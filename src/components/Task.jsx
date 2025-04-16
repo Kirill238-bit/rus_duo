@@ -2,21 +2,6 @@ import React, {useState} from 'react'
 import styled, {keyframes} from 'styled-components'
 import img from '../img/mama.png'
 
-const Wrapper = styled.div`
-    display: flex;
-    margin: 40px 15px;
-    padding:10px 12px;
-    gap:12px;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    img{
-      width: 100%;
-      height: 100%;
-    }
-`
-
 const Variants = styled.div`
     display: flex;
     flex-direction: column;
@@ -29,7 +14,7 @@ const Variants = styled.div`
         background-color: #fff;
         border-radius: 20px;
         padding:12px;
-        font-size: 15px;;
+        font-size: 15px;
     }
 `
 
@@ -46,10 +31,32 @@ const AnimatedText = styled.div`
     display: flex;
     flex-direction: column;
     color:#fff;
-    margin-top:30%;
+    margin-top:20%;
     h3{
         font-size: 22px;
         animation: ${moveText} 1s ease-in-out;
+    }
+`
+
+const Wrapper = styled.div`
+    display: flex;
+    margin: 40px 15px;
+    padding:10px 12px;
+    gap:12px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+
+
+    @media (max-height: 700px) {
+        ${Variants}, ${AnimatedText} {
+            margin-top: 0 !important;
+        }
     }
 `
 
